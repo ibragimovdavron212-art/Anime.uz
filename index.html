@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimeUz — Anime Dunyosi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" onclick="showHome()">🎌 Anime<span>Uz</span></a>
+      <nav class="nav">
+        <a href="#" onclick="showHome()">Bosh sahifa</a>
+        <a href="#" onclick="loadTop()">Top animelar</a>
+        <a href="#" onclick="loadAiring()">Hozir efirda</a>
+      </nav>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Anime qidirish..." />
+        <button onclick="searchAnime()">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Anime olamiga xush kelibsiz</h1>
+      <p>Minglab animelar, reytinglar, tavsiflar — hammasi bir joyda</p>
+      <button onclick="loadTop()">Boshlash</button>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="container">
+    <h2 id="sectionTitle" class="section-title">🔥 Mashhur animelar</h2>
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+    </div>
+    <div id="animeGrid" class="anime-grid"></div>
+    <div id="empty" class="empty hidden">Hech narsa topilmadi 😔</div>
+  </main>
+
+  <!-- MODAL (anime detali) -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 AnimeUz — O‘zbek tilidagi anime sayti. Jikan API asosida.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
